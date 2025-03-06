@@ -1,7 +1,6 @@
 import React from 'react';
 import {Card, Col} from "react-bootstrap";
 import Image from "react-bootstrap/Image";
-import star from '../assets/star.png'
 import {useNavigate} from "react-router-dom"
 import {FLOWER_ROUTE} from "../utils/consts";
 
@@ -15,7 +14,6 @@ const FlowerItem = ({flower}) => {
                     <div>Samsung...</div>
                     <div className="d-flex align-items-center">
                         <div>{flower.rating}</div>
-                        <Image width={18} height={18} src={star}/>
                     </div>
                 </div>
                 <div>{flower.name}</div>

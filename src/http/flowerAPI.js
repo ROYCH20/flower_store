@@ -26,14 +26,14 @@ export const createFlower = async (flower) => {
     return data
 }
 
-export const fetchDevices = async (typeId, brandId, page, limit= 5) => {
-    const {data} = await $host.get('api/device', {params: {
+export const fetchFlowers = async (typeId, brandId, page, limit= 5) => {
+    const {data} = await $host.get('api/flower', {params: {
             typeId, brandId, page, limit
         }})
     return data
 }
 
 export const fetchOneDevice = async (id) => {
-    const {data} = await $host.get('api/device/' + id)
+    const {data} = await $host.get('api/flower/' + id)
     return data
 }
