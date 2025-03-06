@@ -5,7 +5,7 @@ import {Row} from "react-bootstrap";
 import FlowerItem from "./FlowerItem";
 
 const FlowerList = observer(() => {
-    const {device} = useContext(Context)
+    const {flower} = useContext(Context)
 
     return (
         <Row className="d-flex">

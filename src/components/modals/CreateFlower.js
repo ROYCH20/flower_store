@@ -71,7 +71,7 @@ const CreateFlower = observer(({show, onHide}) => {
                     <Dropdown className="mt-2 mb-2">
                         <Dropdown.Toggle>{flower.selectedBrand.name || "Выберите тип"}</Dropdown.Toggle>
                         <Dropdown.Menu>
-                            {device.brands.map(brand =>
+                            {flower.brands.map(brand =>
                                 <Dropdown.Item
                                     onClick={() => flower.setSelectedBrand(brand)}
                                     key={brand.id}

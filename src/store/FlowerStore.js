@@ -19,7 +19,7 @@ export default class FlowerStore {
     setBrands(brands) {
         this._brands = brands
     }
-    setDevices(flowers) {
+    setFlowers(flowers) {
         this._flowers = flowers
     }
 

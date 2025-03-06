@@ -17,14 +17,14 @@ const Shop = observer(() => {
         fetchTypes().then(data => flower.setTypes(data))
         fetchBrands().then(data => flower.setBrands(data))
         fetchFlowers(null, null, 1, 2).then(data => {
-            flower.setDevices(data.rows)
+            flower.setFlowers(data.rows)
             flower.setTotalCount(data.count)
         })
     }, [])
 
     useEffect(() => {
         fetchFlowers(flower.selectedType.id, flower.selectedBrand.id, flower.page, 2).then(data => {
-            flower.setDevices(data.rows)
+            flower.setFlowers(data.rows)
             flower.setTotalCount(data.count)
         })
     }, [flower.page, flower.selectedType, flower.selectedBrand,])
@@ -37,7 +37,7 @@ const Shop = observer(() => {
                 </Col>
                 <Col md={9}>
                     <BrandBar/>
-                    <DeviceList/>
+                    <FlowerList/>
                     <Pages/>
                 </Col>
             </Row>
